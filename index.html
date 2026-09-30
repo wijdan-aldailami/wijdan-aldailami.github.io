@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5A1A21">
+  <meta name="description" content="Wijdan Al-Dailami — Social Media Specialist, digital marketing and content creation portfolio.">
+  <title>Wijdan Al-Dailami — Social Media Specialist</title>
+  <link rel="icon" type="image/png" href="assets/logo-emblem-w.png">
+  <style>
+    :root{
+      --burgundy:#5A1A21;
+      --ruby:#9A3846;
+      --rose:#E0B6BB;
+      --ivory:#FFF9F5;
+      --ink:#24161A;
+      --muted:#6F5A5F;
+      --line:rgba(90,26,33,.13);
+      --card:rgba(255,255,255,.68);
+      --shadow:0 24px 70px rgba(55,19,25,.12);
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(circle at 15% 12%,rgba(154,56,70,.08),transparent 28%),radial-gradient(circle at 85% 28%,rgba(90,26,33,.07),transparent 24%);z-index:-2}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    .container{width:min(1120px,calc(100% - 40px));margin:0 auto}
+    .skip{position:absolute;left:16px;top:-60px;background:var(--burgundy);color:white;padding:10px 14px;border-radius:10px;z-index:100}.skip:focus{top:16px}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(255,249,245,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.08em;color:var(--burgundy)}
+    .brand-mark{width:36px;height:36px;border:1px solid rgba(90,26,33,.18);border-radius:12px;overflow:hidden;background:white;padding:3px;flex:none}
+    .brand-mark img{width:100%;height:100%;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:#5c494e}
+    .nav-links a{position:relative;padding:7px 0}.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ruby);transform:scaleX(0);transform-origin:center;transition:.25s}.nav-links a:hover::after{transform:scaleX(1)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .lang-btn,.menu-btn{border:1px solid var(--line);background:white;color:var(--burgundy);border-radius:12px;padding:9px 12px;cursor:pointer}.lang-btn{min-width:74px;font-weight:700}.menu-btn{display:none}
+
+    .hero{min-height:calc(100vh - 72px);display:grid;place-items:center;position:relative;overflow:hidden;padding:42px 0 64px}
+    .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(154,56,70,.11),transparent 68%);top:6%;left:50%;transform:translateX(-50%);filter:blur(6px)}
+    .hero-inner{text-align:center;position:relative;z-index:1;max-width:920px}
+    .hero-logo{width:min(300px,56vw);height:min(300px,56vw);object-fit:contain;margin:0 auto 20px;filter:drop-shadow(0 18px 34px rgba(90,26,33,.16));animation:float 6s ease-in-out infinite}
+    .hero-name{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:.075em;text-transform:uppercase;font-size:clamp(30px,4.2vw,58px);line-height:1.08;color:var(--burgundy);margin:8px 0 12px}
+    .hero-role{font-size:clamp(13px,1.5vw,17px);letter-spacing:.28em;text-transform:uppercase;color:#5f4b50;margin:0 0 24px}
+    .hero-hook{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,3.4vw,42px);line-height:1.15;max-width:850px;margin:0 auto 18px;color:#2b1b1f}
+    .hero-sub{max-width:720px;margin:0 auto;color:var(--muted);font-size:16px}
+    .hero-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:14px;border:1px solid transparent;font-weight:750;transition:transform .25s,box-shadow .25s,background .25s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--burgundy);color:#fff;box-shadow:0 15px 35px rgba(90,26,33,.18)}
+    .btn-secondary{background:#fff;color:var(--burgundy);border-color:var(--line)}
+    .scroll-cue{display:inline-flex;align-items:center;gap:8px;margin-top:34px;color:#7c666b;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+    .scroll-dot{width:8px;height:8px;border-radius:50%;background:var(--ruby);animation:pulse 1.8s ease-in-out infinite}
+
+    section{padding:110px 0;scroll-margin-top:90px}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px}.section-kicker{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--ruby);font-weight:800;margin:0 0 8px}.section-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,52px);font-weight:500;margin:0;color:var(--burgundy)}.section-note{max-width:430px;color:var(--muted);margin:0}
+
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px}.about-card,.brand-card,.service-card,.experience-item,.edu-card,.project-card,.contact-shell{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .about-card{border-radius:var(--radius);padding:34px}.about-name{font-family:Georgia,"Times New Roman",serif;font-size:clamp(24px,3vw,34px);color:var(--burgundy);margin:0 0 16px}.about-text{font-size:17px;color:#554146;margin:0 0 22px}.mini-points{display:grid;gap:10px;margin-top:20px}.mini-points div{padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#4e3b40}.mini-points strong{color:var(--burgundy)}
+    .brand-card{border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:100%}.brand-logo{width:150px;height:150px;object-fit:contain;margin:0 auto 8px;filter:drop-shadow(0 12px 20px rgba(90,26,33,.13))}.palette{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px}.swatch{height:70px;border-radius:16px;padding:10px;display:flex;align-items:flex-end;border:1px solid rgba(0,0,0,.05);font-size:11px;font-weight:700}.swatch span{background:rgba(255,255,255,.75);padding:4px 6px;border-radius:8px}
+
+    .projects{display:grid;gap:26px}.project-card{border-radius:var(--radius);overflow:hidden}.project-top{display:grid;grid-template-columns:1.05fr .95fr}.project-copy{padding:34px}.project-copy h3{font-family:Georgia,"Times New Roman",serif;font-size:34px;font-weight:500;color:var(--burgundy);margin:0 0 8px}.project-type{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ruby);font-weight:800}.project-copy p{color:#5b474d;margin:18px 0}.project-tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}.tag{padding:8px 10px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:12px;color:#5a474c}.project-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .project-visual{min-height:340px;background:linear-gradient(135deg,#f5e9e5,#fff);display:grid;place-items:center;padding:24px;position:relative;overflow:hidden}.project-visual::before{content:"";position:absolute;inset:auto -30% -35% auto;width:260px;height:260px;border-radius:50%;background:rgba(154,56,70,.1)}.project-visual .visual-logo{width:210px;height:210px;object-fit:contain;filter:drop-shadow(0 20px 35px rgba(90,26,33,.14));position:relative;z-index:1}
+    .metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.metric{padding:12px 14px;border-radius:15px;background:rgba(90,26,33,.06);border:1px solid rgba(90,26,33,.08)}.metric b{display:block;color:var(--burgundy);font-size:20px;line-height:1}.metric span{display:block;color:#6c595d;font-size:11px;margin-top:5px}
+    .media-block{padding:0 34px 34px}.media-title{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#725e63;font-weight:800;margin-bottom:14px}.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.media-slot{min-height:180px;border:1px dashed rgba(90,26,33,.28);border-radius:18px;background:#fff;overflow:hidden;position:relative;display:grid;place-items:center}.media-slot img,.media-slot video{width:100%;height:100%;object-fit:cover;display:block}.media-placeholder{padding:24px;text-align:center;color:#7a666b}.media-placeholder strong{display:block;color:var(--burgundy);margin-bottom:5px}.media-placeholder small{display:block;font-size:11px}
+
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service-card{border-radius:20px;padding:24px;min-height:180px}.service-number{font-family:Georgia,"Times New Roman",serif;font-size:34px;color:var(--rose)}.service-card h3{margin:12px 0 7px;color:var(--burgundy);font-size:17px}.service-card p{margin:0;color:#6a575c;font-size:14px}
+    .skills-wrap{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:14px;color:#513e43;font-weight:650}
+
+    .experience-list{display:grid;gap:14px}.experience-item{border-radius:20px;padding:22px 24px;display:grid;grid-template-columns:180px 1fr;gap:22px}.exp-date{color:var(--ruby);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.experience-item h3{margin:0;color:var(--burgundy);font-size:19px}.experience-item p{margin:6px 0 0;color:#6a575c;font-size:14px}
+    .edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.edu-card{border-radius:20px;padding:24px}.edu-card h3{margin:0;color:var(--burgundy);font-size:18px}.edu-card p{margin:8px 0 0;color:#6a575c;font-size:14px}.cert{display:inline-flex;margin-top:12px;padding:8px 10px;border-radius:999px;background:rgba(154,56,70,.08);color:var(--ruby);font-size:12px;font-weight:750}
+
+    .contact-shell{border-radius:32px;padding:54px;text-align:center;background:linear-gradient(135deg,#fff,#fbefee)}.contact-shell h2{font-family:Georgia,"Times New Roman",serif;color:var(--burgundy);font-size:clamp(38px,6vw,68px);line-height:1.03;font-weight:500;margin:0 auto 18px;max-width:900px}.contact-shell p{color:#675359;max-width:610px;margin:0 auto}.contact-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:26px}
+
+    footer{padding:26px 0 38px;color:#755f64;font-size:13px;text-align:center}.footer-line{height:1px;background:var(--line);margin-bottom:22px}
+    [data-hidden]{display:none!important}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@keyframes pulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.45);opacity:1}}
+
+    html[dir="rtl"] body{font-family:Tahoma,Arial,sans-serif}html[dir="rtl"] .section-head{flex-direction:row-reverse}html[dir="rtl"] .hero-role{letter-spacing:.06em}html[dir="rtl"] .project-copy,.rtl{text-align:right}html[dir="rtl"] .experience-item{grid-template-columns:1fr 180px}html[dir="rtl"] .exp-date{order:2;text-align:left}html[dir="rtl"] .project-actions{justify-content:flex-start}
+
+    @media (max-width:920px){.nav-links{display:none;position:absolute;left:20px;right:20px;top:78px;background:white;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:4px}.nav-links.open{display:flex}.nav-links a{padding:11px 10px;border-radius:10px}.nav-links a:hover{background:#fff6f4}.nav-links a::after{display:none}.menu-btn{display:inline-flex}.about-grid,.project-top{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(2,1fr)}.media-grid{grid-template-columns:1fr 1fr}.project-visual{min-height:280px}.experience-item{grid-template-columns:140px 1fr}html[dir="rtl"] .experience-item{grid-template-columns:1fr 140px}}
+    @media (max-width:640px){.container{width:min(100% - 26px,1120px)}.nav{min-height:66px}.brand{font-size:13px}.brand-mark{width:32px;height:32px}.hero{min-height:calc(100vh - 66px);padding:24px 0 48px}.hero-logo{width:min(245px,66vw);height:min(245px,66vw)}.hero-hook{font-size:30px}.hero-sub{font-size:14px}.hero-cta{margin-top:22px}.btn{width:100%;max-width:320px}section{padding:82px 0}.section-head{display:block}.section-note{margin-top:12px}.about-card,.brand-card,.project-copy{padding:24px}.services-grid,.edu-grid,.media-grid{grid-template-columns:1fr}.project-visual{min-height:240px}.project-visual .visual-logo{width:160px;height:160px}.media-block{padding:0 24px 24px}.experience-item,html[dir="rtl"] .experience-item{grid-template-columns:1fr;gap:8px}.exp-date,html[dir="rtl"] .exp-date{order:0;text-align:inherit}.palette{grid-template-columns:repeat(2,1fr)}.contact-shell{padding:34px 20px;border-radius:24px}.contact-shell h2{font-size:42px}.contact-actions .btn{max-width:100%}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-logo,.scroll-dot{animation:none}.reveal{transition:none}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Wijdan Al-Dailami">
+        <span class="brand-mark"><img src="assets/logo-emblem-w.png" alt="Wijdan brand mark"></span>
+        <span>WIJDAN</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language">العربية</button>
+        <button class="menu-btn" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-inner reveal">
+        <img class="hero-logo" src="assets/logo-emblem-w.png" alt="Wijdan Al-Dailami logo">
+        <h1 class="hero-name">Wijdan AL-Dailami</h1>
+        <p class="hero-role" data-i18n="hero.role">Social Media Specialist</p>
+        <h2 class="hero-hook" data-i18n="hero.hook">Ideas deserve more than a post. I turn them into content people notice, understand, and remember.</h2>
+        <p class="hero-sub" data-i18n="hero.sub">Digital marketing, visual storytelling, short-form content, and AI-assisted creative workflows — built with purpose.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#work" data-i18n="hero.work">Explore My Work ↘</a>
+          <a class="btn btn-secondary" href="#contact" data-i18n="hero.contact">Let’s Connect</a>
+        </div>
+        <a class="scroll-cue" href="#about"><span class="scroll-dot"></span><span data-i18n="hero.scroll">Scroll to explore</span></a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-i18n="about.kicker">About</p><h2 class="section-title" data-i18n="about.title">Strategy with a creative point of view.</h2></div>
+          <p class="section-note" data-i18n="about.note">A practical portfolio built around real content work, digital projects, and an audience-first mindset.</p>
+        </div>
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <h3 class="about-name">Wijdan Ameer Al-Din AL-Dailami</h3>
+            <p class="about-text" data-i18n="about.body">I’m Wijdan, a Social Media Specialist focused on turning ideas into clear, engaging digital content. My work combines content planning, visual storytelling, short-form video, digital marketing thinking, and AI-assisted workflows.</p>
+            <div class="mini-points">
+              <div><strong data-i18n="about.point1.label">Focus</strong><br><span data-i18n="about.point1.text">Social media content, short-form video, and digital storytelling.</span></div>
+              <div><strong data-i18n="about.point2.label">Approach</strong><br><span data-i18n="about.point2.text">Audience-aware, visually clear, practical, and purposeful.</span></div>
+              <div><strong data-i18n="about.point3.label">Tools</strong><br><span data-i18n="about.point3.text">Canva, CapCut, VN, AI tools, and prompt engineering.</span></div>
+            </div>
+          </article>
+          <aside class="brand-card reveal" aria-label="Brand identity">
+            <div>
+              <p class="section-kicker" data-i18n="brand.kicker">Brand identity</p>
+              <img class="brand-logo" src="assets/logo-emblem-w.png" alt="Cheetah and lotus logo">
+              <p style="text-align:center;color:#6a575c;margin:0" data-i18n="brand.caption">Cheetah strength. Lotus elegance. One distinctive personal mark.</p>
+            </div>
+            <div class="palette" aria-label="Brand colors">
+              <div class="swatch" style="background:#5A1A21;color:#fff"><span>#5A1A21</span></div>
+              <div class="swatch" style="background:#9A3846;color:#fff"><span>#9A3846</span></div>
+              <div class="swatch" style="background:#E0B6BB;color:#3d2529"><span>#E0B6BB</span></div>
+              <div class="swatch" style="background:#FFF9F5;color:#3d2529"><span>#FFF9F5</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="section-kicker" data-i18n="work.kicker">Selected work</p><h2 class="section-title" data-i18n="work.title">Work that shows the thinking behind the content.</h2></div>
+          <p class="section-note" data-i18n="work.note">Three projects, each showing a different side of my creative and digital work.</p>
+        </div>
+        <div class="projects">
+          <article class="project-card reveal" id="sanad">
+            <div class="project-top">
+              <div class="project-copy">
+                <div class="project-type" data-i18n="sanad.type">Digital product · Prototype</div>
+                <h3>Sanad — سند</h3>
+                <p data-i18n="sanad.body">An emergency-support app concept designed to help older adults request assistance quickly through a simple Arabic RTL experience.</p>
+                <div class="project-tags">
+                  <span class="tag" data-i18n="tag.ux">UI/UX</span><span class="tag" data-i18n="tag.rtl">Arabic RTL</span><span class="tag" data-i18n="tag.ai">AI-assisted workflow</span><span class="tag" data-i18n="tag.prototype">Prototype</span>
+                </div>
+                <div class="project-actions">
+                  <a class="btn btn-primary" href="https://sanad-elderly-app-de-gnuy.bolt.host/" target="_blank" rel="noopener" data-i18n="sanad.demo">Open Sanad demo ↗</a>
+                  <a class="btn btn-secondary" href="#sanad-media" data-i18n="sanad.media">View media</a>
+                </div>
+              </div>
+              <div class="project-visual"><img class="visual-logo" src="assets/logo-emblem-w.png" alt="Sanad project visual placeholder"></div>
+            </div>
+            <div class="media-block" id="sanad-media">
+              <div class="media-title" data-i18n="media.title">Project media — ready for your images & videos</div>
+              <div class="media-grid">
+                <div class="media-slot"><img src="assets/projects/sanad-01.jpg" alt="Sanad project image 1" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="media-placeholder"><strong data-i18n="media.image1">Sanad image 01</strong><small>assets/projects/sanad-01.jpg</small></div></div>
+                <div class="media-slot"><img src="assets/projects/sanad-02.jpg" alt="Sanad project image 2" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="media-placeholder"><strong data-i18n="media.image2">Sanad image 02</strong><small>assets/projects/sanad-02.jpg</small></div></div>
+                <div class="media-slot"><video controls preload="metadata" src="assets/projects/sanad-demo.mp4" onloadeddata="this.nextElementSibling.hidden=true" onerror="this.hidden=true;this.nextElementSibling.hidden=false"></video><div class="media-placeholder" hidden><strong data-i18n="media.video">Sanad video</strong><small>assets/projects/sanad-demo.mp4</small></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="mirano">
+            <div class="project-top">
+              <div class="project-copy">
+                <div class="project-type" data-i18n="mirano.type">Social media · Real-world work</div>
+                <h3>Mirano / Miranowa — ميرانوا</h3>
+                <p data-i18n="mirano.body">Social media content, product photography, Reels, promotional materials, and marketing ideas created for the store’s digital presence.</p>
+                <div class="metrics">
+                  <div class="metric"><b>500 → 2,200+</b><span data-i18n="mirano.metric1">followers over six months</span></div>
+                  <div class="metric"><b>2025</b><span data-i18n="mirano.metric2">January — June</span></div>
+                </div>
+                <div class="project-tags"><span class="tag" data-i18n="tag.reels">Reels</span><span class="tag" data-i18n="tag.photo">Content photography</span><span class="tag" data-i18n="tag.copy">Content ideas</span><span class="tag" data-i18n="tag.canva">Canva / CapCut</span></div>
+                <div class="project-actions"><a class="btn btn-secondary" href="#mirano-media" data-i18n="mirano.media">View media</a></div>
+              </div>
+              <div class="project-visual"><div style="text-align:center;max-width:280px"><div style="font-family:Georgia,serif;font-size:68px;color:var(--burgundy);line-height:1">01</div><div style="letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--ruby);font-size:12px" data-i18n="mirano.visual">Content that moved with the audience.</div></div></div>
+            </div>
+            <div class="media-block" id="mirano-media">
+              <div class="media-title" data-i18n="media.title">Project media — ready for your images & videos</div>
+              <div class="media-grid">
+                <div class="media-slot"><img src="assets/projects/mirano-01.jpg" alt="Mirano project image 1" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="media-placeholder"><strong data-i18n="media.image1">Mirano image 01</strong><small>assets/projects/mirano-01.jpg</small></div></div>
+                <div class="media-slot"><img src="assets/projects/mirano-02.jpg" alt="Mirano project image 2" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="media-placeholder"><strong data-i18n="media.image2">Mirano image 02</strong><small>assets/projects/mirano-02.jpg</small></div></div>
+                <div class="media-slot"><video controls preload="metadata" src="assets/projects/mirano-reel.mp4" onloadeddata="this.nextElementSibling.hidden=true" onerror="this.hidden=true;this.nextElementSibling.hidden=false"></video><div class="media-placeholder" hidden><strong data-i18n="media.video">Mirano Reel</strong><small>assets/projects/mirano-reel.mp4</small></div></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="minwaat">
+            <div class="project-top">
+              <div class="project-copy">
+                <div class="project-type" data-i18n="minwaat.type">Concept · In progress</div>
+                <h3>Minwaat — منواة</h3>
+                <p data-i18n="minwaat.body">An educational platform concept designed to bring lessons, resources, and support together in one structured learning experience.</p>
+                <div class="project-tags"><span class="tag" data-i18n="tag.platform">Digital platform</span><span class="tag" data-i18n="tag.learning">Education</span><span class="tag" data-i18n="tag.rtl">Arabic RTL</span><span class="tag" data-i18n="tag.prototype">Prototype</span></div>
+                <div class="project-actions"><a class="btn btn-secondary" href="#minwaat-media" data-i18n="minwaat.media">View media</a></div>
+              </div>
+              <div class="project-visual"><div style="text-align:center;max-width:280px"><div style="font-family:Georgia,serif;font-size:68px;color:var(--ruby);line-height:1">02</div><div style="letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--burgundy);font-size:12px" data-i18n="minwaat.visual">Building a clearer learning journey.</div></div></div>
+            </div>
+            <div class="media-block" id="minwaat-media">
+              <div class="media-title" data-i18n="media.title">Project media — ready for your images & videos</div>
+              <div class="media-grid">
+                <div class="media-slot"><img src="assets/projects/minwaat-01.jpg" alt="Minwaat project image 1" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="media-placeholder"><strong data-i18n="media.image1">Minwaat image 01</strong><small>assets/projects/minwaat-01.jpg</small></div></div>
+                <div class="media-slot"><img src="assets/projects/minwaat-02.jpg" alt="Minwaat project image 2" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="media-placeholder"><strong data-i18n="media.image2">Minwaat image 02</strong><small>assets/projects/minwaat-02.jpg</small></div></div>
+                <div class="media-slot"><video controls preload="metadata" src="assets/projects/minwaat-demo.mp4" onloadeddata="this.nextElementSibling.hidden=true" onerror="this.hidden=true;this.nextElementSibling.hidden=false"></video><div class="media-placeholder" hidden><strong data-i18n="media.video">Minwaat video</strong><small>assets/projects/minwaat-demo.mp4</small></div></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="section-kicker" data-i18n="services.kicker">Capabilities</p><h2 class="section-title" data-i18n="services.title">What I bring to the table.</h2></div><p class="section-note" data-i18n="services.note">Focused services built around content, clarity, consistency, and audience connection.</p></div>
+        <div class="services-grid">
+          <article class="service-card reveal"><div class="service-number">01</div><h3 data-i18n="service1.title">Social Media Content</h3><p data-i18n="service1.body">Content ideas and assets designed to communicate clearly and stay consistent with a brand.</p></article>
+          <article class="service-card reveal"><div class="service-number">02</div><h3 data-i18n="service2.title">Short-Form Video</h3><p data-i18n="service2.body">Reels and concise visual storytelling built for attention and retention.</p></article>
+          <article class="service-card reveal"><div class="service-number">03</div><h3 data-i18n="service3.title">Content Planning</h3><p data-i18n="service3.body">Practical planning that turns ideas into an organized, repeatable content workflow.</p></article>
+          <article class="service-card reveal"><div class="service-number">04</div><h3 data-i18n="service4.title">AI-Assisted Creative Workflows</h3><p data-i18n="service4.body">Using AI tools and prompt engineering to accelerate ideation, drafting, and creative production.</p></article>
+        </div>
+        <div style="margin-top:42px" class="reveal"><p class="section-kicker" data-i18n="skills.kicker">Skills & tools</p><div class="skills-wrap">
+          <span class="skill">Social Media Marketing</span><span class="skill">Content Creation</span><span class="skill">Content Writing</span><span class="skill">Content Ideation</span><span class="skill">Short-Form Video</span><span class="skill">Visual Storytelling</span><span class="skill">Canva</span><span class="skill">CapCut</span><span class="skill">VN</span><span class="skill">AI Tools</span><span class="skill">Prompt Engineering</span><span class="skill">Customer Experience</span>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="section-kicker" data-i18n="exp.kicker">Experience</p><h2 class="section-title" data-i18n="exp.title">A practical foundation behind the creative work.</h2></div><p class="section-note" data-i18n="exp.note">Content work strengthened by customer experience, operations, organization, and communication.</p></div>
+        <div class="experience-list">
+          <article class="experience-item reveal"><div class="exp-date">Jan 2025 — Jun 2025</div><div><h3>Content & Digital Marketing Specialist — Mirano Store</h3><p data-i18n="exp1">Produced marketing content, product photography, Reels, promotional materials, content ideas, and supported social-media growth.</p></div></article>
+          <article class="experience-item reveal"><div class="exp-date">Jul 2025 — Nov 2025</div><div><h3>Customer Service Specialist — Al-Moayad Store, Beauty Department</h3><p data-i18n="exp2">Supported customers, followed inquiries, and contributed to a positive shopping experience through clear product support.</p></div></article>
+          <article class="experience-item reveal"><div class="exp-date">Jan 2024 — Dec 2024</div><div><h3>Customer Service & Operations Supervisor — Roma Women’s Center / Café Qamar</h3><p data-i18n="exp3">Coordinated daily operations, appointments, reservations, memberships, internal activities, and service quality.</p></div></article>
+          <article class="experience-item reveal"><div class="exp-date">2018 — 2023</div><div><h3>Administrative Coordinator & Educational Support — Education & Community Projects</h3><p data-i18n="exp4">Organized records, supported data entry and reports, reviewed information for accuracy, and coordinated administrative tasks.</p></div></article>
+          <article class="experience-item reveal"><div class="exp-date">2018 — 2019</div><div><h3>Volunteer Teacher & Class Supervisor — Saad Al-Ashwal School</h3><p data-i18n="exp5">Taught fourth grade, supported classroom activities, and contributed to student engagement.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="section-kicker" data-i18n="edu.kicker">Education & credentials</p><h2 class="section-title" data-i18n="edu.title">Learning that keeps the work moving forward.</h2></div><p class="section-note" data-i18n="edu.note">A foundation in computer skills, digital marketing, customer experience, and AI-assisted creative practice.</p></div>
+        <div class="edu-grid">
+          <article class="edu-card reveal"><h3>Diploma — Comprehensive Computer</h3><p>Al-Shawkani Institute · 2019 — 2021 · GPA 89.54% · Very Good</p><span class="cert" data-i18n="edu1">Education</span></article>
+          <article class="edu-card reveal"><h3>EMC AI Summer Camp</h3><p>2026 · 8 workshops · 16 training hours · Applied project</p><span class="cert" data-i18n="edu2">AI & creative practice</span></article>
+          <article class="edu-card reveal"><h3>Customer Experience Specialist — Yalla</h3><p>23 Dec 2025</p><span class="cert" data-i18n="edu3">Customer experience</span></article>
+          <article class="edu-card reveal"><h3>Basics of Digital Marketing</h3><p>Al-Qudsi Business / Malaysia · 3 Jul 2026</p><span class="cert" data-i18n="edu4">Digital marketing</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-shell reveal">
+          <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
+          <h2 data-i18n="contact.title">LET’S CREATE SOMETHING MEANINGFUL.</h2>
+          <p data-i18n="contact.body">Have a project, an opportunity, or an idea worth exploring? Let’s connect and build something clear, useful, and memorable.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:ms.joan300@gmail.com" data-i18n="contact.email">Email Me</a>
+            <a class="btn btn-secondary" href="https://wa.me/967773875294" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/wijdan-aldailami" target="_blank" rel="noopener" data-i18n="contact.linkedin">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container"><div class="footer-line"></div><span data-i18n="footer">© 2026 Wijdan Al-Dailami. Built with purpose.</span></div>
+  </footer>
+
+  <script>
+    const translations = {
+      en:{
+        skip:'Skip to content',
+        'nav.about':'About','nav.work':'Work','nav.services':'Services','nav.experience':'Experience','nav.contact':'Contact',
+        'hero.role':'Social Media Specialist','hero.hook':'Ideas deserve more than a post. I turn them into content people notice, understand, and remember.','hero.sub':'Digital marketing, visual storytelling, short-form content, and AI-assisted creative workflows — built with purpose.','hero.work':'Explore My Work ↘','hero.contact':'Let’s Connect','hero.scroll':'Scroll to explore',
+        'about.kicker':'About','about.title':'Strategy with a creative point of view.','about.note':'A practical portfolio built around real content work, digital projects, and an audience-first mindset.','about.body':'I’m Wijdan, a Social Media Specialist focused on turning ideas into clear, engaging digital content. My work combines content planning, visual storytelling, short-form video, digital marketing thinking, and AI-assisted workflows.','about.point1.label':'Focus','about.point1.text':'Social media content, short-form video, and digital storytelling.','about.point2.label':'Approach','about.point2.text':'Audience-aware, visually clear, practical, and purposeful.','about.point3.label':'Tools','about.point3.text':'Canva, CapCut, VN, AI tools, and prompt engineering.',
+        'brand.kicker':'Brand identity','brand.caption':'Cheetah strength. Lotus elegance. One distinctive personal mark.',
+        'work.kicker':'Selected work','work.title':'Work that shows the thinking behind the content.','work.note':'Three projects, each showing a different side of my creative and digital work.',
+        'sanad.type':'Digital product · Prototype','sanad.body':'An emergency-support app concept designed to help older adults request assistance quickly through a simple Arabic RTL experience.','tag.ux':'UI/UX','tag.rtl':'Arabic RTL','tag.ai':'AI-assisted workflow','tag.prototype':'Prototype','sanad.demo':'Open Sanad demo ↗','sanad.media':'View media',
+        'mirano.type':'Social media · Real-world work','mirano.body':'Social media content, product photography, Reels, promotional materials, and marketing ideas created for the store’s digital presence.','mirano.metric1':'followers over six months','mirano.metric2':'January — June','tag.reels':'Reels','tag.photo':'Content photography','tag.copy':'Content ideas','tag.canva':'Canva / CapCut','mirano.media':'View media','mirano.visual':'Content that moved with the audience.',
+        'minwaat.type':'Concept · In progress','minwaat.body':'An educational platform concept designed to bring lessons, resources, and support together in one structured learning experience.','tag.platform':'Digital platform','tag.learning':'Education','minwaat.media':'View media','minwaat.visual':'Building a clearer learning journey.',
+        'media.title':'Project media — ready for your images & videos','media.image1':'Image 01','media.image2':'Image 02','media.video':'Video / Reel',
+        'services.kicker':'Capabilities','services.title':'What I bring to the table.','services.note':'Focused services built around content, clarity, consistency, and audience connection.','service1.title':'Social Media Content','service1.body':'Content ideas and assets designed to communicate clearly and stay consistent with a brand.','service2.title':'Short-Form Video','service2.body':'Reels and concise visual storytelling built for attention and retention.','service3.title':'Content Planning','service3.body':'Practical planning that turns ideas into an organized, repeatable content workflow.','service4.title':'AI-Assisted Creative Workflows','service4.body':'Using AI tools and prompt engineering to accelerate ideation, drafting, and creative production.','skills.kicker':'Skills & tools',
+        'exp.kicker':'Experience','exp.title':'A practical foundation behind the creative work.','exp.note':'Content work strengthened by customer experience, operations, organization, and communication.','exp1':'Produced marketing content, product photography, Reels, promotional materials, content ideas, and supported social-media growth.','exp2':'Supported customers, followed inquiries, and contributed to a positive shopping experience through clear product support.','exp3':'Coordinated daily operations, appointments, reservations, memberships, internal activities, and service quality.','exp4':'Organized records, supported data entry and reports, reviewed information for accuracy, and coordinated administrative tasks.','exp5':'Taught fourth grade, supported classroom activities, and contributed to student engagement.',
+        'edu.kicker':'Education & credentials','edu.title':'Learning that keeps the work moving forward.','edu.note':'A foundation in computer skills, digital marketing, customer experience, and AI-assisted creative practice.','edu1':'Education','edu2':'AI & creative practice','edu3':'Customer experience','edu4':'Digital marketing',
+        'contact.kicker':'Contact','contact.title':'LET’S CREATE SOMETHING MEANINGFUL.','contact.body':'Have a project, an opportunity, or an idea worth exploring? Let’s connect and build something clear, useful, and memorable.','contact.email':'Email Me','contact.whatsapp':'WhatsApp','contact.linkedin':'LinkedIn','footer':'© 2026 Wijdan Al-Dailami. Built with purpose.'
+      },
+      ar:{
+        skip:'انتقل إلى المحتوى',
+        'nav.about':'نبذة','nav.work':'الأعمال','nav.services':'الخدمات','nav.experience':'الخبرة','nav.contact':'التواصل',
+        'hero.role':'أخصائية وسائل التواصل الاجتماعي','hero.hook':'الأفكار تستحق أكثر من مجرد منشور. أحوّلها إلى محتوى يُلاحظ، ويُفهم، ويَبقى في الذاكرة.','hero.sub':'التسويق الرقمي، والسرد البصري، والمحتوى القصير، وسير العمل الإبداعي المدعوم بالذكاء الاصطناعي — بهدف واضح.','hero.work':'استكشف أعمالي ↘','hero.contact':'لنتواصل','hero.scroll':'مرّر للاستكشاف',
+        'about.kicker':'نبذة','about.title':'استراتيجية برؤية إبداعية.','about.note':'ملف مهني عملي يجمع بين العمل الحقيقي في المحتوى، والمشاريع الرقمية، وفهم الجمهور.','about.body':'أنا وجدان، أخصائية وسائل التواصل الاجتماعي، أركّز على تحويل الأفكار إلى محتوى رقمي واضح وجذّاب. يجمع عملي بين تخطيط المحتوى، والسرد البصري، والفيديوهات القصيرة، والتفكير التسويقي الرقمي، وسير العمل المدعوم بالذكاء الاصطناعي.','about.point1.label':'التركيز','about.point1.text':'محتوى وسائل التواصل، والفيديوهات القصيرة، والسرد الرقمي.','about.point2.label':'النهج','about.point2.text':'فهم الجمهور، ووضوح بصري، وعمل عملي هادف.','about.point3.label':'الأدوات','about.point3.text':'Canva وCapCut وVN وأدوات الذكاء الاصطناعي وهندسة الأوامر.',
+        'brand.kicker':'الهوية البصرية','brand.caption':'قوة الفهد. أناقة اللوتس. وبصمة شخصية مميزة.',
+        'work.kicker':'أبرز الأعمال','work.title':'أعمال تُظهر الفكرة وراء المحتوى.','work.note':'ثلاثة مشاريع، يعكس كل منها جانبًا مختلفًا من عملي الإبداعي والرقمي.',
+        'sanad.type':'منتج رقمي · نموذج أولي','sanad.body':'مفهوم لتطبيق دعم للطوارئ صُمم لمساعدة كبار السن على طلب المساعدة بسرعة من خلال تجربة عربية مبسطة باتجاه RTL.','tag.ux':'UI/UX','tag.rtl':'عربي RTL','tag.ai':'سير عمل مدعوم بالذكاء الاصطناعي','tag.prototype':'نموذج أولي','sanad.demo':'فتح تجربة سند ↗','sanad.media':'عرض الوسائط',
+        'mirano.type':'وسائل التواصل · عمل واقعي','mirano.body':'محتوى لوسائل التواصل، وتصوير للمنتجات، وReels، ومواد ترويجية، وأفكار تسويقية لدعم الحضور الرقمي للمتجر.','mirano.metric1':'متابع خلال ستة أشهر','mirano.metric2':'يناير — يونيو','tag.reels':'Reels','tag.photo':'تصوير المحتوى','tag.copy':'أفكار المحتوى','tag.canva':'Canva / CapCut','mirano.media':'عرض الوسائط','mirano.visual':'محتوى يتحرك مع الجمهور.',
+        'minwaat.type':'مفهوم · قيد التطوير','minwaat.body':'مفهوم أولي لمنصة تعليمية تجمع الدروس والموارد والدعم ضمن تجربة تعلم منظمة وواضحة.','tag.platform':'منصة رقمية','tag.learning':'تعليم','minwaat.media':'عرض الوسائط','minwaat.visual':'نبني رحلة تعلم أوضح.',
+        'media.title':'وسائط المشروع — جاهزة لإضافة صورك وفيديوهاتك','media.image1':'الصورة 01','media.image2':'الصورة 02','media.video':'فيديو / Reel',
+        'services.kicker':'القدرات','services.title':'ما الذي أقدمه؟','services.note':'خدمات مركزة حول المحتوى، والوضوح، والاستمرارية، وبناء الصلة مع الجمهور.','service1.title':'محتوى وسائل التواصل','service1.body':'أفكار ومواد محتوى مصممة لتوصيل الرسالة بوضوح والحفاظ على اتساق الهوية.','service2.title':'الفيديوهات القصيرة','service2.body':'Reels وسرد بصري مختصر مصمم لجذب الانتباه والحفاظ عليه.','service3.title':'تخطيط المحتوى','service3.body':'تخطيط عملي يحوّل الأفكار إلى سير عمل منظم وقابل للتكرار.','service4.title':'سير عمل إبداعي مدعوم بالذكاء الاصطناعي','service4.body':'استخدام أدوات الذكاء الاصطناعي وهندسة الأوامر لتسريع توليد الأفكار والكتابة والإنتاج الإبداعي.','skills.kicker':'المهارات والأدوات',
+        'exp.kicker':'الخبرة','exp.title':'أساس عملي يدعم العمل الإبداعي.','exp.note':'خبرة في المحتوى تدعمها خبرة في خدمة العملاء، والتشغيل، والتنظيم، والتواصل.','exp1':'إنتاج محتوى تسويقي، وتصوير منتجات، وReels، ومواد ترويجية، وأفكار محتوى، ودعم نمو الحضور على وسائل التواصل.','exp2':'دعم العملاء، ومتابعة الاستفسارات، والمساهمة في تجربة شراء إيجابية من خلال المساندة الواضحة المتعلقة بالمنتجات.','exp3':'تنسيق العمليات اليومية، والمواعيد، والحجوزات، والعضويات، والأنشطة الداخلية، وجودة الخدمة.','exp4':'تنظيم السجلات، ودعم إدخال البيانات والتقارير، ومراجعة المعلومات للتأكد من دقتها، وتنسيق المهام الإدارية.','exp5':'تدريس الصف الرابع، ودعم الأنشطة الصفية، والمساهمة في تفاعل الطلاب.',
+        'edu.kicker':'التعليم والمؤهلات','edu.title':'تعلّم يدفع العمل إلى الأمام.','edu.note':'أساس في مهارات الحاسوب، والتسويق الرقمي، وتجربة العملاء، والممارسة الإبداعية المدعومة بالذكاء الاصطناعي.','edu1':'تعليم','edu2':'الذكاء الاصطناعي والممارسة الإبداعية','edu3':'تجربة العملاء','edu4':'التسويق الرقمي',
+        'contact.kicker':'التواصل','contact.title':'لِنصنع شيئًا ذا معنى.','contact.body':'لديك مشروع، أو فرصة، أو فكرة تستحق الاستكشاف؟ لنتواصل ونبني شيئًا واضحًا، مفيدًا، ولا يُنسى.','contact.email':'راسليني بالبريد','contact.whatsapp':'واتساب','contact.linkedin':'LinkedIn','footer':'© 2026 Wijdan Al-Dailami. صُمم بهدف واضح.'
+      }
+    };
+
+    const root=document.documentElement;
+    const toggle=document.getElementById('langToggle');
+    const nav=document.getElementById('navLinks');
+    const menu=document.getElementById('menuToggle');
+    let current=localStorage.getItem('wijdan-lang')||'en';
+
+    function applyLanguage(lang){
+      current=lang; const t=translations[lang];
+      root.lang=lang; root.dir=lang==='ar'?'rtl':'ltr';
+      document.title=lang==='ar'?'وجدان الديلمي — أخصائية وسائل التواصل الاجتماعي':'Wijdan Al-Dailami — Social Media Specialist';
+      document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(t[key]!==undefined)el.textContent=t[key]});
+      toggle.textContent=lang==='en'?'العربية':'English';
+      toggle.setAttribute('aria-label',lang==='en'?'Switch to Arabic':'التبديل إلى الإنجليزية');
+      menu.setAttribute('aria-label',lang==='en'?'Open menu':'فتح القائمة');
+      localStorage.setItem('wijdan-lang',lang);
+      nav.classList.remove('open'); menu.setAttribute('aria-expanded','false');
+    }
+    toggle.addEventListener('click',()=>applyLanguage(current==='en'?'ar':'en'));
+    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    applyLanguage(current);
+  </script>
+
+  <!--
+    FUTURE PROJECT MEDIA (no code rewrite required):
+    Upload files to assets/projects/ using these exact names and they will appear automatically:
+    Sanad:   sanad-01.jpg | sanad-02.jpg | sanad-demo.mp4
+    Mirano:  mirano-01.jpg | mirano-02.jpg | mirano-reel.mp4
+    Minwaat: minwaat-01.jpg | minwaat-02.jpg | minwaat-demo.mp4
+    You can add more media later by extending the same media-slot pattern.
+  -->
+</body>
+</html>
